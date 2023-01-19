@@ -16,13 +16,13 @@ router.post('/upload', (req,res)=>{
            res.render('index', {msg: err})
        }else{
        let newImage = new Image({
-            name:req.file.filename,
-            path:'/public/images/'+ req.file.filename,
+            name:req.file.originalname,
+            path:'/public/images/'+ req.file.originalname,
             date:Date.now()
         }) 
         newImage.save();
            console.log(req.file);
-           res.render('index', {file: 'images/' + req.file.filename})
+           res.render('index', {file: 'images/' + req.file.originalname})
        }
    })
 })
