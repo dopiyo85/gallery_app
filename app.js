@@ -26,7 +26,7 @@ let DB_URL = process.env.DB_URL
 let db_url = "mongodb+srv://" + DB_USER + ":" + DB_PASS + "@galleryapp.h2prkcb.mongodb.net/" +DB_NAME;
 console.log(db_url);
 let option = {
-    maxPoolSize:10,
+    maxPoolSize:20,
     family:4
 };
 
